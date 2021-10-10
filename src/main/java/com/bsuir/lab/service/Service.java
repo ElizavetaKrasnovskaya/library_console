@@ -1,13 +1,11 @@
 package com.bsuir.lab.service;
 
-import com.bsuir.lab.model.Book;
+public interface Service<T> {
+    T getById(int id);
 
-public interface Service {
-    Book getBookById(int id);
+    void save(T object);
 
-    void saveBook(Book book);
+    void deleteById(int id);
 
-    void deleteBookById(int id);
-
-    void updateBook(Book book);
+    void update(T object);
 }

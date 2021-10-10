@@ -1,13 +1,11 @@
 package com.bsuir.lab.dao;
 
-import com.bsuir.lab.model.Book;
+public interface Dao<T> {
+    T getById(int id);
 
-public interface Dao {
-    Book getBookById(int id);
+    void save(T object);
 
-    void saveBook(Book book);
+    void deleteById(int id);
 
-    void deleteBookById(int id);
-
-    void updateBook(Book book);
+    void update(T object);
 }

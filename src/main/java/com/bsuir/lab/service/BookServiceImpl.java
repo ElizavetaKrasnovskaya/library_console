@@ -4,27 +4,27 @@ import com.bsuir.lab.dao.BookDaoImpl;
 import com.bsuir.lab.dao.Dao;
 import com.bsuir.lab.model.Book;
 
-public class BookServiceImpl implements Service {
+public class BookServiceImpl implements Service<Book> {
 
-    private Dao dao = new BookDaoImpl();
+    private Dao<Book> dao = new BookDaoImpl();
 
     @Override
-    public Book getBookById(int id) {
-        return dao.getBookById(id);
+    public Book getById(int id) {
+        return dao.getById(id);
     }
 
     @Override
-    public void saveBook(Book book) {
-        dao.saveBook(book);
+    public void save(Book book) {
+        dao.save(book);
     }
 
     @Override
-    public void deleteBookById(int id) {
-        dao.deleteBookById(id);
+    public void deleteById(int id) {
+        dao.deleteById(id);
     }
 
     @Override
-    public void updateBook(Book book) {
-        dao.updateBook(book);
+    public void update(Book book) {
+        dao.update(book);
     }
 }
